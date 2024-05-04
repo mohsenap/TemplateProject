@@ -32,6 +32,9 @@ VALUES (NEWID(), 3, 2000, 200000000, N'Hospitalization', N'root', @Userid, SYSDA
 
 
 
+
+
+
 type the https://localhost:5001/swagger/index.html in your project to test by swagger.
 
 In swagger first call the /api/tokens with the body below
