@@ -1,0 +1,7 @@
+{
+  "LoggerSettings": {
+    "AppName": "TemplateProject",
+    "WriteToFile": false,
+    "StructuredConsoleLogging": true
+  }
+}
