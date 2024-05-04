@@ -1,8 +1,36 @@
 Please clone the project
 
-FIrst run the script.sql file to make the database
+
+modify the connection strings in  the files below
+
+database.json
+
+hangfire.json
+
+
 
 Run the project
+
+The database will be created automatically
+
+
+Run the script below for the base data
+
+
+DECLARE @Userid UNIQUEIDENTIFIER
+SELECT @Userid = Id from [Identity].Users WHERE Email ='admin@root.com'
+INSERT INTO Catalog.InsuranceCoverage (Id, InsurenceCover, MinimumAmount, MaximumAmount, Description, TenantId, CreatedBy, CreatedOn, LastModifiedBy, LastModifiedOn, DeletedOn, DeletedBy)
+	VALUES (NEWID(), 1, 5000, 500000000, N'Surgery', N'root', @Userid, SYSDATETIME(), @Userid, SYSDATETIME(), NULL, NULL);
+
+INSERT INTO Catalog.InsuranceCoverage (Id, InsurenceCover, MinimumAmount, MaximumAmount, Description, TenantId, CreatedBy, CreatedOn, LastModifiedBy, LastModifiedOn, DeletedOn, DeletedBy)
+	VALUES (NEWID(), 2, 4000, 400000000, N'Dentith', N'root', @Userid, SYSDATETIME(), @Userid, SYSDATETIME(), NULL, NULL);
+
+
+INSERT INTO Catalog.InsuranceCoverage (Id, InsurenceCover, MinimumAmount, MaximumAmount, Description, TenantId, CreatedBy, CreatedOn, LastModifiedBy, LastModifiedOn, DeletedOn, DeletedBy)
+VALUES (NEWID(), 3, 2000, 200000000, N'Hospitalization', N'root', @Userid, SYSDATETIME(), @Userid, SYSDATETIME(), NULL, NULL);
+
+
+
 
 type the https://localhost:5001/swagger/index.html in your project to test by swagger.
 
