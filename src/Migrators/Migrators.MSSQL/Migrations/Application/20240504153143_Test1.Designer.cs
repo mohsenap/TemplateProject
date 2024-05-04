@@ -12,7 +12,7 @@ using TemplateProject.Infrastructure.Persistence.Context;
 namespace Migrators.MSSQL.Migrations.Application
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240504125457_Test1")]
+    [Migration("20240504153143_Test1")]
     partial class Test1
     {
         /// <inheritdoc />
@@ -207,7 +207,6 @@ namespace Migrators.MSSQL.Migrations.Application
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("InsurenceCover")

@@ -20,7 +20,7 @@ namespace Migrators.MSSQL.Migrations.Application
                     InsurenceCover = table.Column<int>(type: "int", nullable: false),
                     MinimumAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MaximumAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TenantId = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
                     CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
