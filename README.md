@@ -1,7 +1,7 @@
 Please clone the project
 
 
-modify the connection strings in  the files below
+modify the connection strings in  the files below in Host/configurations
 
 database.json
 
